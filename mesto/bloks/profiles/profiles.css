@@ -1,0 +1,8 @@
+.profiles {
+  margin-top: 40px;
+}
+@media screen and (max-width: 882px) {
+  .profiles {
+    margin-top: 38px;
+  }
+}
