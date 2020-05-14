@@ -16,4 +16,4 @@
 
 ## Сылка на проект
 
-https://daniil1704.github.io/ghmesto/
+https://daniil1704.github.io/mesto/
