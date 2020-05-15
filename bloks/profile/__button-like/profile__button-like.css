@@ -7,3 +7,7 @@
   border: none;
   margin-right: 18px;
 }
+.profile__button-like:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

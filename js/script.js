@@ -6,6 +6,12 @@ const nameInput = document.querySelector(".popup__author");
 const infoInput = document.querySelector(".popup__about");
 const name = document.querySelector(".profile__author");
 const info = document.querySelector(".profile__about");
+const name1 = {
+  a: "Жак-Ив Кусто",
+};
+const info2 = {
+  a: "Иследователь океанов",
+};
 
 function edit() {
   popup.classList.add("popup_opened");
@@ -20,8 +26,8 @@ const formElement = document.querySelector("form");
 
 function formSubmitHandler(evt) {
   evt.preventDefault();
-  name.textContent = nameInput.value;
-  info.textContent = infoInput.value;
+  name.textContent = name1.value;
+  info.textContent = info1.value;
   close();
 }
 

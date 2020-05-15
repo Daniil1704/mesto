@@ -10,6 +10,10 @@
   line-height: 22px;
   border-radius: 2px;
 }
+.popup__save:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
 @media screen and (max-width: 375px) {
   .popup__save {
     height: 50px;

@@ -1,3 +1,4 @@
+@import url(../styles/normalize.css);
 @import url(../fonts/inter.css);
 @import url(../bloks/header/header.css);
 @import url(../bloks/footer/footer.css);
@@ -6,3 +7,17 @@
 @import url(../bloks/profile/profile.css);
 @import url(../bloks/page/page.css);
 @import url(../bloks/body/body.css);
+@import url(../bloks/profile__photo/profile__photo.css);
+
+/* div,
+img,
+h1,
+p,
+a,
+h3,
+h4,
+h5,
+section,
+nav {
+  border: 1px solid red;
+} */

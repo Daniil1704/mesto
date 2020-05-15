@@ -4,12 +4,12 @@
 @import url(../profile/__button-edit/profile__button-edit.css);
 @import url(../profile/__button-like/profile__button-like.css);
 @import url(../profile/__description/profile__description.css);
-@import url(../profile/__info/profile__info.css);
+
 @import url(../profile/__name/profile__name.css);
 @import url(../profile/__photo-image/profile__photo-image.css);
 @import url(../profile/__photo-name/profile__photo-name.css);
 @import url(../profile/__photo-title/profile__photo-title.css);
-@import url(../profile/__photo/profile__photo.css);
+
 @import url(../profile/__photos/profile__photos.css);
 @import url(../profile/__about/profile__about.css);
 
@@ -17,9 +17,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 40px;
 }
-@media screen and (max-width: 882px) {
+
+@media screen and (max-width: 915px) {
   .profile {
     flex-direction: column;
+    margin-top: 38px;
   }
 }
