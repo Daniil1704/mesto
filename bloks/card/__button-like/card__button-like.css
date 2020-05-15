@@ -1,4 +1,4 @@
-.profile__button-like {
+.card__button-like {
   background-image: url(../../../images/like.svg);
   background-repeat: no-repeat;
   background-color: initial;
@@ -7,7 +7,7 @@
   border: none;
   margin-right: 18px;
 }
-.profile__button-like:hover {
+.card__button-like:hover {
   cursor: pointer;
   opacity: 0.6;
 }

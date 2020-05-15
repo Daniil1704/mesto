@@ -1,4 +1,4 @@
-.profile__photos {
+.cards {
   display: grid;
   max-width: 882px;
   margin: 0 auto;
@@ -8,14 +8,14 @@
   margin-top: 51px;
 }
 @media screen and (max-width: 915px) {
-  .profile__photos {
+  .cards {
     grid-template-columns: repeat(2, 282px);
     grid-template-rows: repeat(3, 1fr);
     justify-content: center;
   }
 }
 @media screen and (max-width: 700px) {
-  .profile__photos {
+  .cards {
     grid-template-columns: repeat(1, 282px);
   }
 }
