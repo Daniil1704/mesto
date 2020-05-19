@@ -9,7 +9,7 @@ const name = document.querySelector(".profile__author");
 const info = document.querySelector(".profile__about");
 const formElement = document.querySelector("form");
 // popup-add
-const cards = document.querySelector(".cards"); // находим в DOM блок element
+const cards = document.querySelector(".cards"); // находим в DOM блок card
 const addButton = document.querySelector(".profile__button-add"); // кнопка добавления карточки в DOM
 const popupAdd = document.querySelector(".popup__add"); // блок попап добавления карточки в DOM
 const popupShut = document.querySelector(".popup__shut"); // кнопка закрытия попапа добавления карточкив DOM
@@ -86,7 +86,7 @@ function addElement(item) {
     evt.target.classList.toggle("card__like_active");
   });
 
-  elements.prepend(cardsItem);
+  cards.prepend(cardsItem);
 }
 
 initialCards.forEach(addElement);
