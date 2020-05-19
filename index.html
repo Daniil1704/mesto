@@ -26,56 +26,74 @@
 
         <section class="cards">
           <div class="card">
+            <button class="card__rubbish" type="button"></button>
             <img
-              src="./images/Карачаевск.png"
-              alt="Карачаевск"
+              src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg"
+              alt="Архыз"
               class="card__image"
             />
             <div class="card__photo-name">
-              <p class="card__photo-title">Карачаевск</p>
+              <p class="card__photo-title">Архыз</p>
               <button class="card__button-like" type="button"></button>
             </div>
           </div>
           <div class="card">
-            <img src="./images/Москва.jpg" alt="Москва" class="card__image" />
-            <div class="card__photo-name">
-              <p class="card__photo-title">Москва</p>
-              <button class="card__button-like" type="button"></button>
-            </div>
-          </div>
-          <div class="card">
+            <button class="card__rubbish" type="button"></button>
             <img
-              src="./images/Санкт-Петербург.jpg"
-              alt="Санкт-Петербург"
+              src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg"
+              alt="Челябинская область"
               class="card__image"
             />
             <div class="card__photo-name">
-              <p class="card__photo-title">Санкт-Петербург</p>
+              <p class="card__photo-title">Челябинская область</p>
               <button class="card__button-like" type="button"></button>
             </div>
           </div>
           <div class="card">
+            <button class="card__rubbish" type="button"></button>
             <img
-              src="./images/Краснодар.jpg"
-              alt="Краснодар"
+              src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg"
+              alt="Иваново"
               class="card__image"
             />
             <div class="card__photo-name">
-              <p class="card__photo-title">Краснодар</p>
+              <p class="card__photo-title">Иваново</p>
               <button class="card__button-like" type="button"></button>
             </div>
           </div>
           <div class="card">
-            <img src="./images/Алтай.jpg" alt="Алтай" class="card__image" />
+            <button class="card__rubbish" type="button"></button>
+            <img
+              src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg"
+              alt="Камчатка"
+              class="card__image"
+            />
             <div class="card__photo-name">
-              <p class="card__photo-title">Алтай</p>
+              <p class="card__photo-title">Камчатка</p>
               <button class="card__button-like" type="button"></button>
             </div>
           </div>
           <div class="card">
-            <img src="./images/Сочи.jpg" alt="Сочи" class="card__image" />
+            <button class="card__rubbish" type="button"></button>
+            <img
+              src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg"
+              alt="Холмогорский район"
+              class="card__image"
+            />
             <div class="card__photo-name">
-              <p class="card__photo-title">Сочи</p>
+              <p class="card__photo-title">Холмогорский район</p>
+              <button class="card__button-like" type="button"></button>
+            </div>
+          </div>
+          <div class="card">
+            <button class="card__rubbish" type="button"></button>
+            <img
+              src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg"
+              alt="Байкал"
+              class="card__image"
+            />
+            <div class="card__photo-name">
+              <p class="card__photo-title">Байкал</p>
               <button class="card__button-like" type="button"></button>
             </div>
           </div>
@@ -95,7 +113,39 @@
           <button class="popup__save" type="submit">Сохранить</button>
         </form>
       </section>
+      <section class="popup__add popup__opened">
+        <form class="popup__case">
+          <button class="popup__shut" type="button"></button>
+          <h2 class="popup__designation">Новое место</h2>
+          <input class="popup__name" type="text" value="Название" />
+
+          <input class="popup__link" type="text" value="Ссылку на картинку" />
+
+          <button class="popup__make" type="submit">Создать</button>
+        </form>
+      </section>
+      <section class="popup-picture">
+        <form class="popup-picture__case">
+          <button class="popup-picture__shut" type="button"></button>
+          <img
+            src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg"
+            alt="картинка"
+            class="popup-picture__image"
+          />
+          <p class="popup-picture__title">Байкал</p>
+        </form>
+      </section>
     </div>
+    <template id="teamplate">
+      <div class="card">
+        <button class="card__rubbish" type="button"></button>
+        <img src="" alt="картинка" class="card__image" />
+        <div class="card__photo-name">
+          <p class="card__photo-title"></p>
+          <button class="card__button-like" type="button"></button>
+        </div>
+      </div>
+    </template>
     <script src="./js/script.js"></script>
   </body>
 </html>
