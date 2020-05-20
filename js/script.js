@@ -9,17 +9,17 @@ const name = document.querySelector(".profile__author");
 const info = document.querySelector(".profile__about");
 const formElement = document.querySelector("form");
 // popup-add
-const cards = document.querySelector(".cards"); // находим в DOM блок card
-const addButton = document.querySelector(".profile__button-add"); // кнопка добавления карточки в DOM
-const popupAdd = document.querySelector(".popup__add"); // блок попап добавления карточки в DOM
-const popupShut = document.querySelector(".popup__shut"); // кнопка закрытия попапа добавления карточкив DOM
-const popupName = document.querySelector(".popup__name"); // поле имени картинки попапа добавление карточки в DOM
-const popupLink = document.querySelector(".popup__link"); // поле добавления ссылки на картинкинку ПДК в DOM
-const popupMake = document.querySelector(".popup__make"); // кнопки сохранения карточки ПДК в DOM
-const formCase = document.querySelector(".popup__case"); // ПДК в DOM
+const cards = document.querySelector(".cards");
+const addButton = document.querySelector(".profile__button-add");
+const popupAdd = document.querySelector(".popup__add");
+const popupShut = document.querySelector(".popup__shut");
+const popupName = document.querySelector(".popup__name");
+const popupLink = document.querySelector(".popup__link");
+const popupMake = document.querySelector(".popup__make");
+const formCase = document.querySelector(".popup__case");
 // popup-picture
-const popupPicture = document.querySelector(".popup-picture"); // попап с картинкой
-const popupImageClose = document.querySelector(".popup-image__close-btn"); // закрытие попапа с картинкой
+const popupPicture = document.querySelector(".popup-picture");
+const popupImageClose = document.querySelector(".popup-picture__shut");
 
 const initialCards = [
   {
@@ -61,8 +61,8 @@ function togglePopup(elem) {
 function addElement(item) {
   const template = document.querySelector("#template").content; // находим в DOM шаблон с карточкой.
   const cardsItem = template.cloneNode(true); // клонируем шаблон карточки
-  const cardRubbish = cardsItem.querySelector(".card__rubbish"); // Находим кнопку удаления
-  const likeButton = cardsItem.querySelector(".card__button-like"); // Находим кнопку лайк.
+  const cardRubbish = cardsItem.querySelector("card__rubbish"); // Находим кнопку удаления
+  const likeButton = cardsItem.querySelector("card__button-like"); // Находим кнопку лайк.
   const cardImg = cardsItem.querySelector(".card__photo-name"); // выбрали картинку
   const cardTitle = cardsItem.querySelector(".card__photo-title"); // выбрали текст картинки
 
@@ -72,8 +72,7 @@ function addElement(item) {
   cardImg.addEventListener("click", function () {
     togglePopup(popupPicture); // открываем попап с картинкой.
     popupPicture.querySelector(".popup-picture__image").src = item.link; // добавляем URL картинки
-    popupImageClose.querySelector(".popup-picture__title").textContent =
-      item.name;
+    popupImageClose.querySelector(".popup-picture__title").textContent = item.name;
   });
 
   cardRubbish.addEventListener("click", function (evt) {
@@ -85,7 +84,7 @@ function addElement(item) {
     // Добавляем кнопке лайк слушатель с функцией постановки лайка
     evt.target.classList.toggle("card__like_active");
   });
-
+  console.log("я работаю");
   cards.prepend(cardsItem);
 }
 
@@ -99,6 +98,7 @@ function formSubmitHandler(evt) {
   info.textContent = infoInput.value; // вставляем профессию в профиль из формы ввода.
 
   togglePopup(popup); // Закрываем попап
+  console.log("я работаю");
 }
 
 // Функция создания добавления нового объекта в массив из формы добавления новой карточки.
@@ -111,6 +111,7 @@ function userAddElemnt(evt) {
   initialCards.push(newCard); // вставляем объект в конец массива с карточками
   addElement(initialCards[initialCards.length - 1]); // вызываем функцию создания карточки и вставляем данные из последнего объекта массива.
   togglePopup(popupAdd); // вызываем функцию закрытия формы добавления карточки
+  console.log("я работаю");
 }
 
 formElement.addEventListener("submit", formSubmitHandler); // слушатель события “submit” - «отправка» в форме редактирования профиля.
@@ -125,4 +126,4 @@ addButton.addEventListener("click", () => togglePopup(popupAdd)); // Слуша�
 
 popupShut.addEventListener("click", () => togglePopup(popupAdd)); // Слушатель кника для кнопки закрытия попапа редактирования карточки.
 
-popupImageClose.addEventListener("click", () => togglePopup(ppopupPicture)); //  Слушатель клика для закрытия попапа с картинкой по кнопке закрыть.
+popupImageClose.addEventListener("click", () => togglePopup(popupPicture)); //  Слушатель клика для закрытия попапа с картинкой по кнопке закрыть.
