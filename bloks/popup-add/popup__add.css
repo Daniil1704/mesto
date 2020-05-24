@@ -1,0 +1,22 @@
+@import url(../popup-add/__case/popup-add__case.css);
+@import url(../popup-add/__designation/popup-add__designation.css);
+@import url(../popup-add/__link/popup-add__link.css);
+@import url(../popup-add/__make/popup-add__make.css);
+@import url(../popup-add/__name/popup-add__name.css);
+@import url(../popup-add/__shut/popup-add__shut.css);
+.popup-add {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility:hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+  .popup-add.popup_opened {
+    visibility: visible;
+    opacity: 1;
+  }

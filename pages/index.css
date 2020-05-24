@@ -6,197 +6,28 @@
 @import url(../bloks/profile/profile.css);
 @import url(../bloks/page/page.css);
 @import url(../bloks/body/body.css);
-
 @import url(../bloks/cards/cards.css);
 @import url(../bloks/card/card.css);
+@import url(../bloks/popup-picture/popup-picture.css);
+@import url(../bloks/popup-add/popup__add.css);
+@import url(../bloks/card/__button-like/_active/card__button-like_active.css);
 
-/* div,
-img,
-h1,
-p,
-a,
-h3,
-h4,
-h5,
-section,
-nav {
-  border: 1px solid red;
-} */
-.popup__add {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.popup__add.popup_opened {
-  display: flex;
-}
-.popup__case {
-  max-width: 80%;
-  width: 430px;
-  height: 330px;
-  background-color: white;
-  border-radius: 10px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (max-width: 375px) {
-  .popup__case {
-    height: 285px;
-  }
-}
 
-.popup__shut {
-  background-image: url(../images/Close.svg);
 
-  background-color: initial;
-  background-position: center;
-  border: none;
-  width: 40.7px;
-  height: 40.7px;
-  position: absolute;
-  top: -35px;
-  right: -35px;
-}
-.popup__shut:hover {
-  cursor: pointer;
-  opacity: 0.6;
-}
-.popup__designation {
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 29px;
-  margin: 34px 36px 0px 36px;
-}
-@media screen and (max-width: 375px) {
-  .popup__designation {
-    font-size: 14px;
-    line-height: 21px;
-  }
-}
-.popup__name {
-  font-size: 14px;
-  line-height: 17px;
-  border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-left: 36px;
-  margin-right: 36px;
-  margin-top: 54px;
-  height: 27px;
-}
-@media screen and (max-width: 375px) {
-  .popup__name {
-    margin-top: 30px;
-  }
-}
-.popup__link {
-  font-size: 14px;
-  line-height: 17px;
-  border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-left: 36px;
-  margin-right: 36px;
-  margin-top: 30px;
-  height: 27px;
-}
-.popup__make {
-  height: 50px;
-  margin-left: 36px;
-  margin-right: 36px;
-  margin-top: 48px;
-  background-color: rgba(0, 0, 0);
-  border: 1px solid black;
-  color: white;
-  font-size: 18px;
-  line-height: 22px;
-  border-radius: 2px;
-}
-.popup__make:hover {
-  cursor: pointer;
-  opacity: 0.6;
-}
-@media screen and (max-width: 375px) {
-  .popup__make {
-    height: 50px;
-    margin-left: 36px;
-    margin-right: 36px;
-    margin-top: 35px;
-  }
-}
-.card__rubbish {
-  border: none;
-  background-color: transparent;
-  background-image: url(../images/rubbish.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 18px;
-  height: 19.3px;
-  position: absolute;
-  outline: none;
-  margin-top: 18px;
-  margin-left: 249px;
-}
-.card__rubbish:hover {
-  cursor: pointer;
-  opacity: 0.6;
-}
-.card__like_active {
-  background-image: url(../images/likeac.svg);
-}
 
-.popup-picture {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s linear;
-}
-.popup-picture__case {
-  max-width: 75vw;
-  max-height: 75vh;
-  position: relative;
-}
-.popup-picture__shut {
-  height: 40.7px;
-  width: 40.7px;
-  box-sizing: border-box;
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  background-image: url(../images/Close.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  padding: 0;
-  outline: none;
-}
 
-.popup-picture__image {
-  max-width: 75vw;
-  max-height: 75vh;
-}
 
-.popup-picture__title {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
-  color: #ffffff;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

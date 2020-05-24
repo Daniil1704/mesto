@@ -5,14 +5,18 @@
 @import url(./__save/popup__save.css);
 @import url(./__title/popup__title.css);
 .popup {
-  display: none;
+  display: flex;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s linear;
 }
 .popup.popup_opened {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
 }

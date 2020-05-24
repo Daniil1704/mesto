@@ -1,0 +1,12 @@
+.popup-add__designation {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 34px 36px 0px 36px;
+  }
+  @media screen and (max-width: 375px) {
+    .popup-add__designation {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
