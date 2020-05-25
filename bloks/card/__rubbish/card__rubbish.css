@@ -2,14 +2,11 @@
     border: none;
     background-color: transparent;
     background-image: url(../../../images/rubbish.svg);
-    background-position: center;
-    background-repeat: no-repeat;
     width: 18px;
     height: 19.3px;
     position: absolute;
-    outline: none;
-    margin-top: 18px;
-    margin-left: 249px;
+    top: 18px;
+    right: 15px;
   }
   .card__rubbish:hover {
     cursor: pointer;

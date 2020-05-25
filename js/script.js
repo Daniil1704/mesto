@@ -70,7 +70,6 @@ function addElement(item) {
     popupPicture.querySelector('.popup-picture__image').src = photo.src;
     popupPicture.querySelector('.popup-picture__title').textContent = photo.alt;
     togglePopup(popupPicture);
-    console.log(photo.alt)
   });
 
   cardRubbish.addEventListener('click', function (evt) {
@@ -116,10 +115,9 @@ function userAddElemnt(evt) {
   const newCard = [];
   newCard.name = popupName.value;
   newCard.link = popupLink.value;
-  initialCards.push(newCard);
-  addElement(initialCards[initialCards.length - 1]);
+  addElement(newCard);
   togglePopup(popupAdd);
-  console.log("я работаю");
+
 }
 
 
