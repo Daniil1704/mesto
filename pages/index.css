@@ -13,7 +13,7 @@
 @import url(../bloks/card/__button-like/_active/card__button-like_active.css);
 
 
-.popup-add__make_disabled {
+.popup__save_disabled {
     color: black;
     background-color: white;
     opacity: .2;
