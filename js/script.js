@@ -3,8 +3,8 @@
 const editButton = document.querySelector('.profile__button-edit');
 const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
-const nameInput = document.querySelector('.popup__author');
-const infoInput = document.querySelector('.popup__about');
+const nameInput = document.querySelector('.popup__input_author');
+const infoInput = document.querySelector('.popup__input_about');
 const name = document.querySelector('.profile__author');
 const info = document.querySelector('.profile__about');
 const formElement = document.querySelector('form');
@@ -13,13 +13,14 @@ const cards = document.querySelector('.cards');
 const addButton = document.querySelector('.profile__button-add');
 const popupAdd = document.querySelector('.popup-add');
 const popupShut = document.querySelector('.popup-add__shut');
-const popupName = document.querySelector('.popup-add__name');
-const popupLink = document.querySelector('.popup-add__link');
+const popupName = document.querySelector('.popup__input_name');
+const popupLink = document.querySelector('.popup__input_link');
 const popupMake = document.querySelector('.popup-add__make');
 const formCase = document.querySelector('.popup-add__case');
 // popup-picture
 const popupPicture = document.querySelector('.popup-picture');
 const popupImageClose = document.querySelector('.popup-picture__shut');
+
 
 
 
@@ -95,7 +96,7 @@ function togglePopup(elem) {
   elem.classList.toggle('popup_opened');
   nameInput.value = name.textContent;
   infoInput.value = info.textContent;
-
+  document.addEventListener('keydown', escHandler);
 }
 
 function formSubmitHandler(evt) {
@@ -121,6 +122,17 @@ function userAddElemnt(evt) {
 }
 
 
+function escHandler(evt) {
+  if (evt.key === 'Escape') {
+    document.querySelector('.popup_opened').classList.remove('popup_opened'); //ещем класс , если он есть, то удаляем его
+    document.removeEventListener('keydown', escHandler); //удаляем слушатель
+  }
+};
+
+document.addEventListener('click', function (evt) {
+  evt.target.classList.remove('popup_opened');
+  evt.stopPropagation();
+});
 
 formElement.addEventListener('submit', formSubmitHandler);
 
@@ -134,4 +146,5 @@ addButton.addEventListener('click', () => togglePopup(popupAdd));
 
 popupShut.addEventListener('click', () => togglePopup(popupAdd));
 
-popupImageClose.addEventListener('click', () => togglePopup(popupPicture)); //  Слушатель клика для закрытия попапа с картинкой по кнопке закрыть.
+popupImageClose.addEventListener('click', () => togglePopup(popupPicture));
+
