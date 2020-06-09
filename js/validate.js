@@ -1,7 +1,7 @@
 const object = {
     formSelector: '.popup__container',
     inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__button',
+    submitButtonSelector: '.popup__save',
     inactiveButtonClass: '.popup__save_disabled',
     inputErrorClass: '.popup__input-error',
     errorClass: '.popup__span-error_active'
@@ -44,7 +44,7 @@ const setEventListeners = (formElement) => {
         });
     });
 };
-const enableValidation = () => {
+const enableValidation = (object) => {
     const formList = Array.from(document.querySelectorAll('.popup__container'));
     formList.forEach((formElement) => {
         formElement.addEventListener('submit', function (evt) {
