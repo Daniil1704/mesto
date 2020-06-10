@@ -97,6 +97,7 @@ function togglePopup(elem) {
   nameInput.value = name.textContent;
   infoInput.value = info.textContent;
   document.addEventListener('keydown', escHandler);
+  enableValidation(object);
 }
 
 function formSubmitHandler(evt) {
