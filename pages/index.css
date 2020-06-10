@@ -11,35 +11,11 @@
 @import url(../bloks/popup-picture/popup-picture.css);
 @import url(../bloks/popup-add/popup-add.css);
 @import url(../bloks/card/__button-like/_active/card__button-like_active.css);
+@import url(../bloks/popup/__save/_disabled/popup__save_disabled.css);
 
 
-.popup__save_disabled {
-    color: black;
-    background-color: white;
-    opacity: .2;
-    pointer-events:none;
-}
-.popup__span-error {
-    font-size: 12px;
-    line-height: 15px;
-    color: red;
-    opacity: 0;
-    margin-left: 36px;
-    margin-right: 36px;
-    margin-top: 6px;
-    height: 14px;
-}
-@media screen and (max-width: 375px) {
-.popup__span-error {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 0;
-    font-size: 10px;
-}}
-.popup__input-error {
-    border-bottom: 1px solid red;
-}
-.popup__span-error_active {
-    opacity: 1;
-}
+
+
+
+
 
