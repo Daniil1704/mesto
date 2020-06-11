@@ -125,8 +125,8 @@ function userAddElemnt(evt) {
 
 function escHandler(evt) {
   if (evt.key === 'Escape') {
-    document.querySelector('.popup_opened').classList.remove('popup_opened'); //ещем класс , если он есть, то удаляем его
-    document.removeEventListener('keydown', escHandler); //удаляем слушатель
+    document.querySelector('.popup_opened').classList.remove('popup_opened');
+    document.removeEventListener('keydown', escHandler);
   }
 };
 
