@@ -15,7 +15,6 @@ const popupAdd = document.querySelector('.popup-add');
 const popupShut = document.querySelector('.popup-add__shut');
 const popupName = document.querySelector('.popup__input_name');
 const popupLink = document.querySelector('.popup__input_link');
-const popupMake = document.querySelector('.popup-add__make');
 const formCase = document.querySelector('.popup-add__case');
 // popup-picture
 const popupPicture = document.querySelector('.popup-picture');
@@ -51,7 +50,29 @@ const initialCards = [
   },
 ];
 
+const object = {
+  formSelector: '.popup__container',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__save',
+  inactiveButtonClass: '.popup__save_disabled',
+  inputErrorClass: '.popup__input-error',
+  errorClass: '.popup__span-error_active'
+};
 
+function escHandler(evt) {
+  if (evt.key === 'Escape') {
+    document.querySelector('.popup_opened').classList.remove('popup_opened');
+    document.removeEventListener('keydown', escHandler);
+  }
+};
+
+function togglePopup(elem) {
+  elem.classList.toggle('popup_opened');
+  nameInput.value = name.textContent;
+  infoInput.value = info.textContent;
+  document.addEventListener('keydown', escHandler);
+  enableValidation(object);
+}
 
 
 function addElement(item) {
@@ -92,13 +113,6 @@ initialCards.forEach(addElement);
 
 //  Обработчик  формы редактирования профиля
 
-function togglePopup(elem) {
-  elem.classList.toggle('popup_opened');
-  nameInput.value = name.textContent;
-  infoInput.value = info.textContent;
-  document.addEventListener('keydown', escHandler);
-  enableValidation(object);
-}
 
 function formSubmitHandler(evt) {
   evt.preventDefault();
@@ -114,7 +128,7 @@ function formSubmitHandler(evt) {
 
 function userAddElemnt(evt) {
   evt.preventDefault();
-  const newCard = [];
+  const newCard = {};
   newCard.name = popupName.value;
   newCard.link = popupLink.value;
   addElement(newCard);
@@ -123,17 +137,12 @@ function userAddElemnt(evt) {
 }
 
 
-function escHandler(evt) {
-  if (evt.key === 'Escape') {
-    document.querySelector('.popup_opened').classList.remove('popup_opened');
-    document.removeEventListener('keydown', escHandler);
-  }
-};
-
 document.addEventListener('click', function (evt) {
   evt.target.classList.remove('popup_opened');
   evt.stopPropagation();
 });
+
+enableValidation(object);
 
 formElement.addEventListener('submit', formSubmitHandler);
 

@@ -1,11 +1,4 @@
-const object = {
-    formSelector: '.popup__container',
-    inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__save',
-    inactiveButtonClass: '.popup__save_disabled',
-    inputErrorClass: '.popup__input-error',
-    errorClass: '.popup__span-error_active'
-};
+
 // показ ошибки 
 const showInputError = (formElement, inputElement, errorMessage) => {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
@@ -60,4 +53,3 @@ const toggleButtonState = (inputList, buttonElement) => {
         buttonElement.classList.remove('popup__save_disabled');
     }
 };
-enableValidation(object);
