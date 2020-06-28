@@ -1,6 +1,8 @@
 // popup-edit
 import Card from './Card.js';
+
 import FormValidator from './FormValidator.js';
+
 const editButton = document.querySelector('.profile__button-edit');
 const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
@@ -23,10 +25,6 @@ const popupImageClose = document.querySelector('.popup-picture__shut');
 
 const buttonProfile = document.querySelector('.popup__save');
 const buttonAdd = document.querySelector('.popup__save-add');
-
-
-
-
 
 const initialCards = [
   {
@@ -106,7 +104,7 @@ function addCard() {
   });
 
 }
-function userAddElemnt(evt) {
+function userAddElement(evt) {
   evt.preventDefault();
   const card = new Card(popupLink.value, popupName.value, '#template');
   const cardElement = card.generateCard();
@@ -139,7 +137,7 @@ editButton.addEventListener('click', () => togglePopup(popup));
 
 popupClose.addEventListener('click', () => togglePopup(popup));
 
-formCase.addEventListener('submit', userAddElemnt);
+formCase.addEventListener('submit', userAddElement);
 
 addButton.addEventListener('click', () => togglePopup(popupAdd));
 
