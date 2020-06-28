@@ -12,7 +12,6 @@ const name = document.querySelector('.profile__author');
 const info = document.querySelector('.profile__about');
 const formElement = document.querySelector('form');
 // popup-add
-// const cards = document.querySelector('.cards');
 const addButton = document.querySelector('.profile__button-add');
 const popupAdd = document.querySelector('.popup-add');
 const popupShut = document.querySelector('.popup-add__shut');
