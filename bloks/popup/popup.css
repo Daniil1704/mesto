@@ -17,8 +17,12 @@
   left: 0;
   visibility: hidden;
   opacity: 0;
-
+  transition: 0.3s linear;
   justify-content: center;
   align-items: center;
 }
-
+.popup.popup_opened {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s linear;
+}
