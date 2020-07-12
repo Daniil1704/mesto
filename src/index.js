@@ -1,7 +1,8 @@
+import './pages/index.css';
 
-import { Card } from './Card.js';
+import { Card } from './js/Card.js';
 
-import { FormValidator } from './FormValidator.js';
+import { FormValidator } from './js/FormValidator.js';
 
 import {
   initialCards,
@@ -26,19 +27,17 @@ import {
   pictureLink,
   formElements,
   userFormProfile
-} from './utils.js';
+} from './js/utils.js';
 
-import { Userinfo } from './UserInfo.js';
+import { Userinfo } from './js/UserInfo.js';
 
-import { PopupWithForm } from './PopupWithForm.js';
+import { PopupWithForm } from './js/PopupWithForm.js';
 
-import { Popup } from './Popup.js';
+// import { Popup } from './js/Popup.js';
 
-import { Section } from './Section.js';
+import { Section } from './js/Section.js';
 
-import { PopupWithImage } from './PopupWithImage.js';
-
-
+import { PopupWithImage } from './js/PopupWithImage.js';
 
 const userInfo = new Userinfo(userFormProfile)
 
@@ -56,8 +55,6 @@ const openProfileForm = () => {
   infoInput.value = profile.text;
   popupWithForm.open()
 }
-
-
 
 const photoPopup = new PopupWithImage(popupPicture, pictureName, pictureLink);
 

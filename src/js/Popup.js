@@ -19,14 +19,14 @@ export class Popup {
         this._popupElement.classList.remove('popup_opened');
     }
 
-    _handleEscClose = (event) => {
-        if (event.key === "Escape") {
+    _handleEscClose(evt) {
+        if (evt.key === 'Escape') {
             this.close();
         }
     }
 
-    _closeByOverlay = (event) => {
-        if (event.target.classList.contains('popup_opened')) {
+    _closeByOverlay(evt) {
+        if (evt.target.classList.contains('popup_opened')) {
             this.close();
         }
     }
