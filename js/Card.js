@@ -1,9 +1,10 @@
-import togglePopup from './script.js';
-import { popupPicture } from './script.js';
-export default class Card {
-    constructor(link, name, cardSelector) {
-        this._link = link;
-        this._name = name;
+
+
+export class Card {
+    constructor(cardSelector, { handleCardClick, initialCards }) {
+        this._link = initialCards.link;
+        this._name = initialCards.name;
+        this._handleCardClick = handleCardClick
         this._cardSelector = cardSelector;
     }
 
@@ -41,7 +42,7 @@ export default class Card {
     _popupPicture() {
         popupPicture.querySelector('.popup-picture__image').src = this._link;
         popupPicture.querySelector('.popup-picture__title').textContent = this._name;
-        togglePopup(popupPicture);
+
     }
 
     _setEventListeners() {
@@ -52,7 +53,7 @@ export default class Card {
             this._cardRubbish();
         });
         this._element.querySelector('.card__image').addEventListener('click', () => {
-            this._popupPicture();
+            this._handleCardClick();
         });
 
     }

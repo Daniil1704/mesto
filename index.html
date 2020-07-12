@@ -37,31 +37,31 @@
       <form class="popup__container" novalidate>
         <button class="popup__close" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <input class=" popup__input popup__input_author " id="author-input" type="text" pattern="[A-Za-zА-ЯЁа-яё -]{1,}"
-          minlength="2" maxlength="40" placeholder="Имя" required />
+        <input name="nameAuthor" class=" popup__input popup__input_author " id="author-input" type="text"
+          pattern="[A-Za-zА-ЯЁа-яё -]{1,}" minlength="2" maxlength="40" placeholder="Имя" required />
         <span class="popup__span-error " id="author-input-error"></span>
-        <input class="popup__input popup__input_about " id="about-input" type="text" minlength="2" maxlength="200"
-          placeholder="О себе" required />
+        <input name="textAuthor" class="popup__input popup__input_about " id="about-input" type="text" minlength="2"
+          maxlength="200" placeholder="О себе" required />
         <span class="popup__span-error " id="about-input-error"></span>
         <button class="popup__save" type="submit">Сохранить</button>
       </form>
     </section>
     <section class="popup popup-add ">
       <form class="popup__container popup-add__case" novalidate>
-        <button class="popup-add__shut" type="button"></button>
+        <button class="popup__close" type="button"></button>
         <h2 class="popup__title ">Новое место</h2>
-        <input class="popup__input popup__input_name " id="name-input" type="text" placeholder="Название" minlength="1"
-          maxlength="30" required />
+        <input name="name" class="popup__input popup__input_name " id="name-input" type="text" placeholder="Название"
+          minlength="1" maxlength="30" required />
         <span class="popup__span-error " id="name-input-error"></span>
-        <input class="popup__input popup__input_link " id="link-input" type="url" placeholder="Ссылка на картинку"
-          required />
+        <input name="link" class="popup__input popup__input_link " id="link-input" type="url"
+          placeholder="Ссылка на картинку" required />
         <span class="popup__span-error " id="link-input-error"></span>
         <button class="popup__save popup__button-add" type="submit">Создать</button>
       </form>
     </section>
     <section class="popup popup-picture">
       <form class="popup-picture__case">
-        <button class="popup-picture__shut" type="button"></button>
+        <button class="popup__close" type="button"></button>
         <img src="" alt="" class="popup-picture__image" />
         <p class="popup-picture__title"></p>
       </form>

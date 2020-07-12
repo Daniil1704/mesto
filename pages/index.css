@@ -1,17 +1,17 @@
 @import url(../styles/normalize.css);
 @import url(../fonts/inter.css);
-@import url(../bloks/header/header.css);
-@import url(../bloks/footer/footer.css);
-@import url(../bloks/popup/popup.css);
-@import url(../bloks/profile/profile.css);
-@import url(../bloks/page/page.css);
-@import url(../bloks/body/body.css);
-@import url(../bloks/cards/cards.css);
-@import url(../bloks/card/card.css);
-@import url(../bloks/popup-picture/popup-picture.css);
-@import url(../bloks/popup-add/popup-add.css);
-@import url(../bloks/card/__button-like/_active/card__button-like_active.css);
-@import url(../bloks/popup/__save/_disabled/popup__save_disabled.css);
+@import url(../bloсks/header/header.css);
+@import url(../bloсks/footer/footer.css);
+@import url(../bloсks/popup/popup.css);
+@import url(../bloсks/profile/profile.css);
+@import url(../bloсks/page/page.css);
+@import url(../bloсks/body/body.css);
+@import url(../bloсks/cards/cards.css);
+@import url(../bloсks/card/card.css);
+@import url(../bloсks/popup-picture/popup-picture.css);
+@import url(../bloсks/popup-add/popup-add.css);
+@import url(../bloсks/card/__button-like/_active/card__button-like_active.css);
+@import url(../bloсks/popup/__save/_disabled/popup__save_disabled.css);
 
 
 
