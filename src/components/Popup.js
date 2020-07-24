@@ -3,6 +3,7 @@ export class Popup {
         this._popupElement = popupElement;
         this._handleEscClose = this._handleEscClose.bind(this);
         this._closeByOverlay = this._closeByOverlay.bind(this);
+        console.log(this._popupElement)
     }
 
     open() {

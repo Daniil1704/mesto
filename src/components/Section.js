@@ -6,15 +6,18 @@ export class Section {
 
     }
 
-    renderItems() {
-
-
-        this._initialArray.forEach(item => {
-            this._renderer(item);
+    renderItems(cards, userId) {
+        this._container.innerHTML = '';
+        cards.reverse().forEach(item => {
+            this._renderer(item, userId);
         });
     }
 
     setItem(element) {
         this._container.prepend(element);
+    }
+
+    addItem(element) {
+        this._container.append(element);
     }
 }
