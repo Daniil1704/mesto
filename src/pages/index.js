@@ -146,6 +146,9 @@ Promise.all([api.getProfileInfo(), api.getCards()])
               .catch((err) => {
                 console.log(err)
               })
+              .finally(() => {
+                popupWithDelete.close()
+              })
           })
         },
         handleLike: () => {
