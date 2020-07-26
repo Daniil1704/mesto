@@ -6,10 +6,10 @@ export class Section {
 
     }
 
-    renderItems(cards, userId) {
+    renderItems() {
         this._container.innerHTML = '';
-        cards.reverse().forEach(item => {
-            this._renderer(item, userId);
+        this._initialArray.reverse().forEach(item => {
+            this._renderer(item);
         });
     }
 
@@ -17,7 +17,4 @@ export class Section {
         this._container.prepend(element);
     }
 
-    addItem(element) {
-        this._container.append(element);
-    }
 }

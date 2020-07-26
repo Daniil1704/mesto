@@ -32,7 +32,7 @@ import {
   popupSure,
   popupAvatar,
   buttonAvatar
-} from '../components/utils.js';
+} from '../utils/utils.js';
 
 import { Userinfo } from '../components/UserInfo.js';
 
@@ -102,46 +102,7 @@ Promise.all([api.getProfileInfo(), api.getCards()])
     const section = new Section({
       data: data[1],
       renderer: (data) => {
-        const card = new Card('#template', userId, {
-          initialCards: data,
-          handleCardClick: () => {
-            photoPopup.open(data)
-          },
-          deleteCards: () => {
-            popupWithDelete.open()
-            popupWithDelete.setHandleSubmit(() => {
-              api.deleteCard(data._id)
-                .then(() => {
-                  card.delete()
-                })
-                .catch((err) => {
-                  console.log(err)
-                })
-            })
-          },
-          handleLike: () => {
-            api.addLike(data._id)
-              .then((data) => {
-                card.clickLike(data.likes);
-                card.likeButton();
-              })
-              .catch((err) => {
-                console.log(err)
-              })
-          },
-          handleDeleteLike: () => {
-            api.deleteLike(data._id)
-              .then((data) => {
-                card.clickLike(data.likes);
-                card.likeButton();
-              })
-              .catch((err) => {
-                console.log(err)
-              })
-          }
-        });
-        const cardElement = card.generateCard();
-        section.setItem(cardElement);
+        setting(userId, data)
       },
     },
       cards
@@ -156,49 +117,7 @@ Promise.all([api.getProfileInfo(), api.getCards()])
         const inputCard = cardForm.getInputValues();
         api.addCards(inputCard)
           .then((data) => {
-            const card = new Card('#template', userId, {
-              initialCards: data,
-              handleCardClick: () => {
-                photoPopup.open(data)
-              },
-              deleteCards: () => {
-                popupWithDelete.open()
-                popupWithDelete.setHandleSubmit(() => {
-                  api.deleteCard(data._id)
-                    .then(() => {
-                      card.delete()
-                    })
-                    .catch((err) => {
-                      console.log(err)
-                    })
-                })
-              },
-              handleLike: () => {
-                api.addLike(data._id)
-                  .then((data) => {
-                    card.clickLike(data.likes);
-                    card.likeButton();
-                  })
-                  .catch((err) => {
-                    console.log(err)
-                  })
-              },
-              handleDeleteLike: () => {
-                api.deleteLike(data._id)
-                  .then((data) => {
-                    card.clickLike(data.likes);
-                    card.likeButton();
-                  })
-                  .catch((err) => {
-                    console.log(err)
-                  })
-              }
-            });
-
-
-            const cardElement = card.generateCard();
-            section.setItem(cardElement);
-            cardForm.close();
+            setting(userId, data)
           })
 
           .catch((err) => {
@@ -210,6 +129,49 @@ Promise.all([api.getProfileInfo(), api.getCards()])
           })
       }
     })
+    function setting(userId, data) {
+
+      const card = new Card('#template', userId, {
+        initialCards: data,
+        handleCardClick: () => {
+          photoPopup.open(data)
+        },
+        deleteCards: () => {
+          popupWithDelete.open()
+          popupWithDelete.setHandleSubmit(() => {
+            api.deleteCard(data._id)
+              .then(() => {
+                card.delete()
+              })
+              .catch((err) => {
+                console.log(err)
+              })
+          })
+        },
+        handleLike: () => {
+          api.addLike(data._id)
+            .then((data) => {
+              card.clickLike(data.likes);
+              card.likeButton();
+            })
+            .catch((err) => {
+              console.log(err)
+            })
+        },
+        handleDeleteLike: () => {
+          api.deleteLike(data._id)
+            .then((data) => {
+              card.clickLike(data.likes);
+              card.likeButton();
+            })
+            .catch((err) => {
+              console.log(err)
+            })
+        }
+      });
+      const cardElement = card.generateCard();
+      section.setItem(cardElement);
+    }
     addButton.addEventListener('click', () => { cardForm.open() });
   })
 

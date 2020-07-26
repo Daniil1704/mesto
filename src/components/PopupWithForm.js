@@ -31,10 +31,6 @@ export class PopupWithForm extends Popup {
         this._formElement.addEventListener('submit', this._submit);
     }
 
-    close() {
-        super.close();
-    }
-
     sendingLoading(isLoading) {
         if (isLoading) {
             this._buttonSubmit.classList.add('popup__button-loading');

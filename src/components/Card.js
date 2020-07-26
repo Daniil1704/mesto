@@ -1,3 +1,5 @@
+import { popupPicture } from '../utils/utils.js';
+
 export class Card {
     constructor(cardSelector, userId, { initialCards, handleCardClick, deleteCards, handleLike, handleDeleteLike, }) {
         this._link = initialCards.link;
@@ -50,10 +52,7 @@ export class Card {
         return this._element;
     }
 
-    _cardRubbish() {
-        this._element.remove();
 
-    }
 
     likeButton() {
         this._element.querySelector('.card__button-like').classList.toggle('card__button-like_active');
